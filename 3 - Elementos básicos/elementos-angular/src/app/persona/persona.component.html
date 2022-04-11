@@ -1,0 +1,11 @@
+<!--Esto se conoce como interpolación {{}}-->
+<p>Nombre: {{nombre}}, Apellido: {{apellido}}, Edad: {{getEdad()}}, Expresión: {{getEdad()+2}}</p>
+
+<!--Con la interpolación no solo podemos acceder a los atributos de una clase, si no también
+a variables asociadas a elementos HTML (Template reference)-->
+<!--El evento keyup sale cuando terminamos de pulsar cualquier tecla, el 0 es el tiempo a esperar-->
+<div (keyup)="0">
+    <label>Repetidor: </label>
+    <input #entrada type="text">
+    {{entrada.value}}
+</div>

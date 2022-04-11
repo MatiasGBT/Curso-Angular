@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Listado de personas</h1>
+      <!--Property binding permite cambiar los valores de los atributos de los elementos HTML-->
+      <!--Para esto primero hay que poner las propiedades entre corchetes-->
+      <!--Asociamos la propiedad disabled al valor del atributo deshabilitar, el
+      cual se encuentra en personas.component.ts-->
+      <button class="btn btn-primary" [disabled]='deshabilitar'
+      (click)="agregarPersona()">Agregar persona</button>
+      <!--Event binding permite capturar eventos (como los eventos de JavaScript que utilizaban on)
+      para esto hay que ponerlos entre paréntesis y definir su nombre-->
+      <p>{{mensaje}}</p>
+      <app-persona></app-persona>
+
+      <label>Titulo Persona</label>
+      <!--Con la variable event capturamos la información del input-->
+      <input type="text" class="form-control" (input)="modificarTitulo($event)">
+      {{titulo}}
+      <br>
+      <!--Two way binding permite modificar directamente una propiedad
+      de nuestra clase desde la plantilla y viceversa-->
+      <label>Profesión</label>
+      <input type="text" class="form-control" [(ngModel)]="profesion">
+      {{profesion}}
+    </div>
+  </div>
+</div>
