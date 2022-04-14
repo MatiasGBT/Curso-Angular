@@ -1,0 +1,15 @@
+<form>
+    <div class="mb-3">
+        <label>Operando A:</label>
+        <input type="number" class="form-control" placeholder="Escribe el operando A" [(ngModel)]="operandoA"
+            name="operandoA">
+    </div>
+
+    <div class="mb-3">
+        <label>Operando B:</label>
+        <input type="number" class="form-control" placeholder="Escribe el operando A" [(ngModel)]="operandoB"
+            name="operandoB">
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="sumar()">Sumar</button>
+</form>
